@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "fractalcommons",
+    "name": "Fractal Commons",
+    "description": "The library mod used in Fractal Studios projects such as Expunged and EcologiCraft.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["Fractal Studios"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
