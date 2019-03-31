@@ -14,7 +14,7 @@ public class Constants
 
     public static final int VERSION_MAJ = 1;
     public static final int VERSION_MIN = 0;
-    public static final int VERSION_PAT = 0;
+    public static final int VERSION_PAT = 1;
 
     public static final String COMPILED_VERSION = VERSION_MAJ + "." + VERSION_MIN + "." + VERSION_PAT;
 
