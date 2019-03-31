@@ -4,13 +4,15 @@ import java.util.Calendar;
 
 import static java.util.Calendar.*;
 
-public class FractalCalendar
+public class EventCalendar
 {
     private static boolean isNewYear; //1/1
     private static boolean isValentinesDay; //14/2
-    private static boolean isStDavidsDay; //1/3
-    private static boolean isAprilFoolsDay; //1/4
+    private static boolean isPgBirthday; //9/3
+    private static boolean isFractalBirthday; //9/3
+    private static boolean isAFDay; //1/4
     private static boolean isHalloween; //31/10
+    private static boolean isInitiativeDay; //16/12
     private static boolean isChristmas; //25/12
 
     public static int day;
@@ -22,60 +24,59 @@ public class FractalCalendar
 
         day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        switch (calendar.get(Calendar.MONTH))
+        switch(calendar.get(Calendar.MONTH)) //month
         {
             case JANUARY:
             {
-                if (day == 1)
+                if(day == 1)
                 {
                     isNewYear = true;
                 }
-
                 break;
             }
             case FEBRUARY:
             {
-                if (day == 14)
+                if(day == 14)
                 {
                     isValentinesDay = true;
                 }
-
-                break;
             }
             case MARCH:
             {
-                if (day == 1)
+                if(day == 9)
                 {
-                    isStDavidsDay = true;
-                }
+                    isPgBirthday = true;
 
+                    isFractalBirthday = true;
+                }
                 break;
             }
             case APRIL:
             {
-                if (day == 1)
+                if(day == 1)
                 {
-                    isAprilFoolsDay = true;
+                    isAFDay = true;
                 }
-
                 break;
             }
             case OCTOBER:
             {
-                if (day == 31)
+                if(day == 31)
                 {
                     isHalloween = true;
                 }
-
                 break;
             }
             case DECEMBER:
             {
-                if (day == 25 || day == 24)
+                if(day == 16)
+                {
+                    isInitiativeDay = true;
+                }
+                else if(day == 25)
                 {
                     isChristmas = true;
                 }
-
                 break;
             }
         }
@@ -91,19 +92,29 @@ public class FractalCalendar
         return isValentinesDay;
     }
 
-    public static boolean isStDavidsDay()
+    public static boolean isFractalBirthday()
     {
-        return isStDavidsDay;
+        return isFractalBirthday;
     }
 
-    public static boolean isAprilFoolsDay()
+    public static boolean isPgBirthday()
     {
-        return isAprilFoolsDay;
+        return isPgBirthday;
+    }
+
+    public static boolean isAFDay()
+    {
+        return isAFDay;
     }
 
     public static boolean isHalloween()
     {
         return isHalloween;
+    }
+
+    public static boolean isInitiativeDay()
+    {
+        return isInitiativeDay;
     }
 
     public static boolean isChristmas()

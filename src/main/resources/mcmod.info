@@ -2,7 +2,7 @@
   {
     "modid": "fractalcommons",
     "name": "Fractal Commons",
-    "description": "The library mod used in Fractal Studios projects such as Expunged and EcologiCraft.",
+    "description": "The library mod used in Fractal Studios projects such as Expunged and EcologiCraft. Why not head to the Fractal Configuration page, found at the bottom left of the options page?",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",

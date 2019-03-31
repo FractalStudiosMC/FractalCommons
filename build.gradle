@@ -52,9 +52,42 @@ processResources {
     }
 }
 
-task signJar(type: SignJar, dependsOn: reobfJar) {
-    inputFile = jar.archivePath
-    outputFile = jar.archivePath
+jar {
+    manifest {
+        attributes 'FMLAT' : 'FractalCommons_at.cfg'
+    }
 }
 
-build.dependsOn signJar
+// deobf jars
+task deobfJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = 'deobf'
+    manifest {
+        attributes 'FMLAT' : 'FractalCommons-deobf_at.cfg'
+    }
+}
+
+// api jar
+task apiJar(type: Jar) {
+    from sourceSets.main.java
+    include "com/fractalmc/commons/api/**"
+    from sourceSets.main.output
+    include "com/fractalmc/commons/api/**"
+    classifier = 'api'
+}
+
+task signJar(type: SignJar, dependsOn: reobfJar) {
+    onlyIf {
+        project.hasProperty('keyStore')
+    }
+
+    inputFile = jar.archivePath
+    outputFile = jar.archivePath
+
+    keyStore = project.properties.keyStore
+    alias = project.properties.keyStoreAlias
+    storePass = project.properties.keyStorePass
+    keyPass = project.properties.keyStoreKeyPass
+}
+
+build.dependsOn sourceJar, deobfJar, apiJar, signJar
