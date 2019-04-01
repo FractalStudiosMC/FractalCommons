@@ -1,0 +1,14 @@
+This project is a lightweight fork of iChunUtil, made clear in the README.md file. 
+
+COPYRIGHT NOTICES
+
+- This project contains code from iChunUtil (https://github.com/iChun/iChunUtil). 
+
+Notable Changes include:
+
+- Other components not found in iChunUtil, multiblock, energy, etc.
+- Most iChun classes are cut down in order to fit the needs of Fractal and partners, in order to make the library more lightweight.
+
+License:
+
+https://github.com/iChun/iChunUtil/blob/master/COPYING
