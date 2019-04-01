@@ -4,7 +4,7 @@
 
 ## What Is It?
 
-The Fractal Commons is a Minecraft library that used by Fractal Studios, partner modding teams and the wider community as a utility mod.
+The Fractal Commons is a Minecraft library that can be used by Fractal Studios, partner modding teams and the wider community as a utility mod.
 
 ## Licensing
 
