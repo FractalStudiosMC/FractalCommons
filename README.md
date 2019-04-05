@@ -1,4 +1,4 @@
-# FractalCommons ![] (https://img.shields.io/badge/Fractal%20Studios-Official-Green.svg) [![](https://img.shields.io/badge/Discord-Fractal%20Dev-738bd7.svg)](https://discord.gg)
+# FractalCommons ![] (https://img.shields.io/badge/Fractal%20Studios-Official-Green.svg) ![](https://img.shields.io/badge/Discord-Fractal%20Dev-738bd7.svg)(https://discord.gg)
 
 18,404 lines of Minecraft utilities.
 
